@@ -33,15 +33,19 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/remixicon/fonts/remixicon.scss",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/aos/dist/aos.css"
             ],
-            "scripts": [],
+            "scripts": ["node_modules/aos/dist/aos.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -110,5 +114,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "579df5af-92de-4987-badd-aa9ab0d7a42d"
   }
 }
