@@ -3,6 +3,9 @@ import { FormBuilder, FormControlName, FormGroup, NgForm, Validators } from '@an
 import { ToastrService } from 'ngx-toastr';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 // import emailjs from 'emailjs-com';
+
+
+import Aos from 'aos';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -27,6 +30,15 @@ export class ContactComponent {
       email:['',[Validators.email,Validators.required]],
       msg:['',[Validators.required,Validators.minLength(10)]]
     })
+
+
+        Aos.init({
+          duration:800,
+          offset:200,
+          once:false,
+          
+        })
+
   }
 
 

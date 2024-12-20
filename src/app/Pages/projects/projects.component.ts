@@ -14,9 +14,15 @@ export class ProjectsComponent {
 
     if (typeof window !== 'undefined') {
       Aos.init({
-        duration:800,
+        // duration:800,
+        // easing: 'ease-in-out', // نوع الحركة
+        // once: false
+
+        duration: 500, // مدة الحركة
+        offset: 200,    // المسافة قبل بدء التأثير
         easing: 'ease-in-out', // نوع الحركة
-        once: false
+        once: true,
+        delay:0,
 
       })
     }

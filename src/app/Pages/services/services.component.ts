@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import Aos from 'aos';
+
 
 @Component({
   selector: 'app-services',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class ServicesComponent {
 
+
+
+  ngOnInit(){
+      Aos.init({
+        duration:800,
+        offset:200,
+        once:false,
+        // easing: 'ease-in-out',
+        delay:0
+      })
+    }
 }
