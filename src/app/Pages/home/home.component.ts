@@ -12,14 +12,20 @@ export class HomeComponent {
 
 
   ngOnInit(){
-    AOS.init({
-      duration: 1200, // مدة الحركة
-      offset: 200,    // المسافة قبل بدء التأثير
-      easing: 'ease-in-out', // نوع الحركة
-      once: true,
-      delay:2000,
-    })
-    ;
+
+    if (typeof window !== 'undefined') {
+
+        AOS.init({
+          duration: 1200, // مدة الحركة
+          offset: 200,    // المسافة قبل بدء التأثير
+          easing: 'ease-in-out', // نوع الحركة
+          once: true,
+          delay:2000,
+        })
+        ;
+  
+    }
+
   }
 
 }

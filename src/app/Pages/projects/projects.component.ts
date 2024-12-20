@@ -10,12 +10,17 @@ export class ProjectsComponent {
 
 
   ngOnInit(){
-    Aos.init({
-      duration:800,
-      easing: 'ease-in-out', // نوع الحركة
-      once: false
 
-    })
+
+    if (typeof window !== 'undefined') {
+      Aos.init({
+        duration:800,
+        easing: 'ease-in-out', // نوع الحركة
+        once: false
+
+      })
+    }
+
   }
 
 }
