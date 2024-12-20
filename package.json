@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:App_PortFolio": "node dist/app-port-folio/server/server.mjs",
     "build:ssr": "ng build --configuration production && ng run App_PortFolio:server",
-  "serve:ssr": "node dist/app-port-folio/server/main.js"
+    "serve:ssr": "node dist/app-port-folio/server/main.js"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +25,7 @@
     "@angular/ssr": "^18.2.12",
     "@emailjs/browser": "^4.4.1",
     "@netlify/functions": "^3.0.0",
+    "@nguniversal/express-engine": "^16.2.0",
     "aos": "^3.0.0-beta.6",
     "express": "^4.18.2",
     "ngx-toastr": "^19.0.0",
